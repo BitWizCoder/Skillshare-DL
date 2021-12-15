@@ -2,11 +2,11 @@ import requests, json, sys, re, os
 import cloudscraper
 from slugify import slugify
 
-class Skillshare(object):
+class Downloader(object):
     def __init__(
         self,
         cookie,
-        download_path=os.environ.get('FILE_PATH', './Skillshare'),
+        download_path=os.environ.get('FILE_PATH', './Download'),
         pk='BCpkADawqM2OOcM6njnM7hf9EaK6lIFlqiXB0iWjqGWUQjU7R8965xUvIQNqdQbnDTLz0IAO7E6Ir2rIbXJtFdzrGtitoee0n1XXRliD-RH9A-svuvNW9qgo3Bh34HEZjXjG4Nml4iyz3KqF',
         brightcove_account_id=3695997568001,
     ):
@@ -33,19 +33,19 @@ class Skillshare(object):
 
     def download_course_by_class_id(self, class_id):
         data = self.fetch_course_data_by_class_id(class_id=class_id)
-        teacher_name = None
+        # teacher_name = None
 
-        if 'vanity_username' in data['_embedded']['teacher']:
-            teacher_name = data['_embedded']['teacher']['vanity_username']
+        # if 'vanity_username' in data['_embedded']['teacher']:
+        #     teacher_name = data['_embedded']['teacher']['vanity_username']
 
-        if not teacher_name:
-            teacher_name = data['_embedded']['teacher']['full_name']
+        # if not teacher_name:
+        #     teacher_name = data['_embedded']['teacher']['full_name']
 
-        if not teacher_name:
-            raise Exception('Failed to read teacher name from data')
+        # if not teacher_name:
+        #     raise Exception('Failed to read teacher name from data')
 
-        if self.is_unicode_string(teacher_name):
-            teacher_name = teacher_name.encode('ascii', 'replace')
+        # if self.is_unicode_string(teacher_name):
+        #     teacher_name = teacher_name.encode('ascii', 'replace')
 
         title = data['title']
 
@@ -55,7 +55,7 @@ class Skillshare(object):
         base_path = os.path.abspath(
             os.path.join(
                 self.download_path,
-                slugify(teacher_name),
+                # slugify(teacher_name),
                 slugify(title),
             )
         ).rstrip('/')
