@@ -1,1 +1,2 @@
-cookie = "PHPSESSID=ba835f51b243436682932ebc6c4a8aa6"
+# cookie = "PHPSESSID=xxxxxx"
+cookie = """skillshare_user_=xxxxxx"""
