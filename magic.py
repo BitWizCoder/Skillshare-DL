@@ -1,2 +1,2 @@
 # cookie = "PHPSESSID=xxxxxx"
-cookie = """skillshare_user_=xxxxxx"""
+cookie = """skillshare_user_=796fccab631e3f1aabe0fa8a45e736df3325c496a%3A4%3A%7Bi%3A0%3Bs%3A8%3A%2226790060%22%3Bi%3A1%3Bs%3A33%3A%22devtempmail1%2Brydakjqmrg%40gmail.com%22%3Bi%3A2%3Bi%3A7776000%3Bi%3A3%3Ba%3A5%3A%7Bs%3A8%3A%22username%22%3Bs%3A9%3A%22812495606%22%3Bs%3A10%3A%22login_time%22%3Bs%3A19%3A%222022-07-16%2014%3A41%3A38%22%3Bs%3A10%3A%22touch_time%22%3Bs%3A19%3A%222022-07-25%2017%3A17%3A06%22%3Bs%3A5%3A%22roles%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22locale%22%3Bs%3A2%3A%22en%22%3B%7D%7D"""
